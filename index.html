@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Password Generator</h1>
+            </div>
+            <p class="subtitle">Create strong, secure passwords to protect your accounts</p>
+        </div>
+
+        <div class="generator-card">
+            <!-- Password Display -->
+            <div class="password-section">
+                <div class="password-display">
+                    <div class="password-output" id="passwordOutput">
+                        Click generate to create a password
+                    </div>
+                    <div class="password-actions" id="passwordActions" style="display: none;">
+                        <button class="copy-btn" id="copyBtn" title="Copy password">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="strength-indicator" id="strengthIndicator" style="display: none;">
+                    <span class="strength-label">Strength:</span>
+                    <span class="strength-value" id="strengthValue">Strong</span>
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Password Length -->
+            <div class="control-section">
+                <label class="control-label">
+                    Password Length: <span id="lengthValue">12</span>
+                </label>
+                <input 
+                    type="range" 
+                    min="4" 
+                    max="50" 
+                    value="12" 
+                    class="length-slider" 
+                    id="lengthSlider"
+                >
+                <div class="slider-labels">
+                    <span>4</span>
+                    <span>50</span>
+                </div>
+            </div>
+
+            <!-- Character Options -->
+            <div class="control-section">
+                <label class="control-label">Character Types</label>
+                <div class="options-grid">
+                    <label class="option-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        <span class="option-text">Uppercase (A-Z)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        <span class="option-text">Lowercase (a-z)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        <span class="option-text">Numbers (0-9)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" id="special" checked>
+                        <span class="checkmark"></span>
+                        <span class="option-text">Special Characters (!@#$%^&*)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="generate-btn" id="generateBtn">
+                <i class="fas fa-sync-alt"></i>
+                Generate Password
+            </button>
+
+            <!-- Copy Success Message -->
+            <div class="success-message" id="successMessage" style="display: none;">
+                <i class="fas fa-check"></i>
+                <span>Password copied to clipboard!</span>
+            </div>
+        </div>
+
+        <!-- Security Tips -->
+        <div class="security-tips">
+            <div class="tips-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Security Tips</h3>
+            </div>
+            <ul class="tips-list">
+                <li>Use different passwords for each account</li>
+                <li>Store passwords in a secure password manager</li>
+                <li>Enable two-factor authentication when available</li>
+                <li>Avoid using personal information in passwords</li>
+                <li>Update passwords regularly for important accounts</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
