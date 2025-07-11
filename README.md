@@ -25,11 +25,6 @@ A lightweight and user-friendly password generator built using HTML, CSS, and Ja
 
 ---
 
-## 🖼️ Screenshots
-
-*(Optional: Add a screenshot of your app here)*
-
----
 
 ## 📁 Project Structure
 password-generator-app/
